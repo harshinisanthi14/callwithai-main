@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIDEO CALL WITH AI</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body onload="zoom()">
+    <video id="webcam" autoplay playsinline></video>
+    <div class="videoele">
+      <video
+        id="myVideo"
+        align="center"
+        src="cindrella.mp4"
+        autoplay
+        playsinline
+        muted
+      ></video>
+    </div>
+    <div id="chat-window">
+      <form id="chat-form">
+        <img src="cam.png" alt="" id="cam" />
+        <a id="listenn" onclick="toggleMute()">
+          click<br />
+          <i class="fa-solid fa-microphone fa-2x" id="micc"></i>
+        </a>
+        <a id="cutcbtn" href="Close.html">
+          <img src="cut.jpg" alt="" id="cutp" />
+        </a>
+      </form>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script type="module" src="scripts.js"></script>
+    <script
+      src="https://kit.fontawesome.com/aed515ecd9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      function zoom() {
+        document.body.style.zoom = "100%";
+      }
+      function toggleMute() {
+        const webcam = document.getElementById("webcam");
+        webcam.muted = !webcam.muted;
+      }
+      function cutcall() {
+        event.preventDefault();
+        window.location.href = "Close.html";
+      }
+    </script>
+  </body>
+</html>

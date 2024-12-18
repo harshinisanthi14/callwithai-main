@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre>
+        Contents
+ I Basics 1
+ 1 GettingStarted 3
+ 1.1 InstallingPython . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+ 1.2 IDLE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+ 1.3 Afirstprogram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+ 1.4 Typingthingsin. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+ 1.5 Gettinginput. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+ 1.6 Printing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+ 1.7 Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+ 1.8 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+ 2 Forloops 11
+ 2.1 Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+ 2.2 Theloopvariable . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+ 2.3 Therangefunction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+ 2.4 ATrickierExample. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+ 2.5 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+ 3 Numbers 19
+ 3.1 IntegersandDecimalNumbers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+ 3.2 MathOperators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+ 3.3 Orderofoperations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+ 3.4 Randomnumbers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+ 3.5 Mathfunctions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+ 3.6 GettinghelpfromPython . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+ 3.7 UsingtheShellasaCalculator . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+ 3.8 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+ 4 Ifstatements 27
+ 4.1 ASimpleExample . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+ 4.2 Conditionaloperators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+ 4.3 CommonMistakes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+ 4.4 elif. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+ 4.5 Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+ iii
+iv CONTENTS
+ 5 MiscellaneousTopicsI 33
+ 5.1 Counting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33
+ 5.2 Summing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+ 5.3 Swapping. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+ 5.4 Flagvariables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+ 5.5 Maxesandmins. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+ 5.6 Comments . . . . . . . . . . . . . . . . . . . . . . . . .
+ 1.4 Typing things in
+ Case Case matters. To Python, print, Print, and PRINT are all different things. For now, stick
+ with lowercase as most Python statements are in lowercase.
+ Spaces Spaces matter at the beginning of lines, but not elsewhere. For example, the code below
+ will not work.
+ temp = eval(input('Enter a temperature in Celsius: '))
+ print('In Fahrenheit, that is', 9/5*temp+32)
+ Python uses indentation of lines for things we’ll learn about soon. On the other hand, spaces in
+ most other places don’t matter. For instance, the following lines have the same effect:
+ print('Hello world!')
+ print ('Hello world!')
+ print( 'Hello world!' )
+ Basically, computers will only do what you tell them, and they often take things very literally.
+ Python itself totally relies on things like the placement of commas and parentheses so it knows
+ what’s what. It is not very good at figuring out what you mean, so you have to be precise. It will
+ be very frustrating at first, trying to get all of the parentheses and commas in the right places, but
+ after a while it will become more natural. Still, even after you’ve programmed for a long time, you
+ will still miss something. Fortunately, the Python interpreter is pretty good about helping you find
+ your mistakes.
+6
+ CHAPTER1. GETTINGSTARTED
+ 1.5 Getting input
+ The input function is a simple way for your program to get information from people using your
+ program. Here is an example:
+ name = input('Enter your name: ')
+ print('Hello, ', name)
+ The basic structure is
+ variable name = input(message to user)
+ The aboveworksfor getting text from the user. To get numbers from the user to use in calculations,
+ weneed to do something extra. Here is an example:
+ num = eval(input('Enter a number: '))
+ print('Your number squared:', num*num)
+ The eval function converts the text entered by the user into a number. One nice feature of this is
+ you can enter expressions, like 3*12+5, and eval will compute them for you.
+ Note If you run your program and nothing seems to be happening, try pressing enter. There is a
+ bit of a glitch in IDLE that occasionally happens with input statements.
+ 1.6 Printing
+ Here is a simple example:
+ print('Hi there')
+ The print function requires parenthesis around its arguments. In the program above, its only
+ argumentis the string 'Hi there'. Anythinginsidequoteswill(withafewexceptions)beprinted
+ exactly as it appears. In the following, the first statement will output 3+4, while the second will
+ output 7.
+ print('3+4')
+ print(3+4)
+ To print several things at once, separate them by commas. Python will automatically insert spaces
+ between them. Below is an example and the output it produces.
+ print('The value of 3+4 is', 3+4)
+ print('A', 1, 'XYZ', 2)
+ The value of 3+4 is 7
+ A 1 XYZ 2
+1.7. VARIABLES
+ 7
+ Optional arguments
+ There are two optional arguments to the print function. They are not overly important at this
+ stage of the game, so you can safely skip over this section, but they are useful for making your
+ output look nice.
+ sep Python will insert a space between each of the arguments of the print function. There is an
+ optional argument called sep, short for separator, that you can use to change that space to some
+thing else. For example, using sep=':' would separate the arguments by a colon and sep='##'
+ would separate the arguments by two pound signs.
+ One particularly useful possibility is to have nothing inside the quotes, as in sep=''. This says to
+ put no separation between the arguments. Here is an example where sep is useful for getting the
+ output to look nice
+    </pre>
+  </body>
+</html>
